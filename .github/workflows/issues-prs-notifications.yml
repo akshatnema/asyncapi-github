@@ -43,7 +43,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
       - name: Convert markdown to slack markdown for pull request
-        uses: asyncapi/.github/.github/actions/slackify-markdown@master
+        uses: akshatnema/asyncapi-github/.github/actions/slackify-markdown@master
         id: prmarkdown
         with:
           markdown: "[${{github.event.pull_request.title}}](${{github.event.pull_request.html_url}}) \n ${{github.event.pull_request.body}}"
